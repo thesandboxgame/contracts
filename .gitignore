@@ -1,0 +1,10 @@
+.env
+yarn.error.log
+yarn-error.log
+.yalc
+yalc.lock
+coverage*
+.vscode/*
+node_modules/
+.idea/
+.DS_Store

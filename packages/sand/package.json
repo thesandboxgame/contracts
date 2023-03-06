@@ -1,0 +1,56 @@
+{
+  "name": "sand",
+  "version": "0.0.1",
+  "description": "TheSandbox game sand erc20 token",
+  "scripts": {
+    "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\" && eslint --max-warnings 0 \"**/*.{js,ts}\"",
+    "lint:fix": "solhint --fix \"contracts/**/*.sol\" && eslint --fix \"**/*.{js,ts}\"",
+    "check": "hardhat check",
+    "format": "prettier --ignore-path .gitignore --check \"**/*.{ts,js,sol}\"",
+    "format:fix": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,sol}\"",
+    "coverage": "dotenv -- cross-env NODE_OPTIONS=\"--max-old-space-size=8192 node --unhandled-rejections=strict\" HARDHAT_COMPILE=true NODE_ENV=test hardhat coverage --testfiles 'test/*.ts''test/*.js'",
+    "test": "dotenv -- cross-env NODE_OPTIONS=\"--max-old-space-size=4096 --unhandled-rejections=strict\" HARDHAT_COMPILE=true NODE_ENV=test hardhat test",
+    "hardhat": "hardhat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thesandboxgame/contracts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thesandboxgame/contracts/issues"
+  },
+  "homepage": "https://github.com/thesandboxgame/contracts#readme",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "dotenv-cli": "^7.0.0",
+    "ethers": "^5.6.2",
+    "hardhat": "^2.12.7",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^4.9.5"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-custom"
+  },
+  "prettier": "prettier-config-custom",
+  "solhint": {
+    "extends": "custom"
+  }
+}
